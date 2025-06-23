@@ -7,12 +7,45 @@ Lista de Exercícios referentes a coleções e arquivos em python
 #permita que o usuário digite um número inteiro para ser buscado na lista, se
 #for encontrado o programa deve imprimir a posição desse número na lista, caso
 #contrário, deve imprimir a mensagem: "Nao encontrado!".
+def q1():
+    lista = []
+    for _ in range(15):
+        lista.append(random.randrange(100))
+    print(lista)
+    numero = int(input_int('Digite um número a ser buscado: ',0,100))
+    try:
+        posicao = lista.index(numero)
+    except ValueError:
+        print(f'{numero} não localizado na lista')
+    else:
+        print(f'Localizado na posição: {posicao}')
+        
 
 #2. Faça um programa que armazene 10 letras em uma lista e imprima uma listagem
 #numerada.
+def  2º trimestre():
+    letras = []
+    for _ in range(10):
+        letras.append(chr(random.randrange(65,91)))
+    cont = 1
+    for c in letras:
+        print(f'{cont}: {c}')
+        cont+=1
+
+#2.1 Faça um programa que peça ao usuário para informar a qtde d
+def q21():
+    qtde = entrada_int(Qtde de caraceteres para senha'8,20)
+    senha = ''
 
 #3. Construa uma programa que armazene 15 números em uma lista e imprima
 #uma listagem numerada contendo o número e uma das mensagens: par ou ímpar.
+def q03 ():
+numeros = [12, 7, 5, 8, 10, 3, 15, 18, 20, 21, 22, 25, 27, 30, 33]
+for i, num in enumerate(numeros, start=1):
+    if num % 2 == 0:
+        print(f"{i}. {num} - par")
+    else:
+        print(f"{i}. {num} - ímpar")
 
 #4. Faça um programa que armazene 8 números em uma lista e imprima todos os
 #números. Ao final, imprima o total de números múltiplos de seis.
