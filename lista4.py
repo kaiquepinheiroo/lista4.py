@@ -49,12 +49,23 @@ for i, num in enumerate(numeros, start=1):
 
 #4. Faça um programa que armazene 8 números em uma lista e imprima todos os
 #números. Ao final, imprima o total de números múltiplos de seis.
+def q04 ():
+numeros = [6, 12, 5, 9, 18, 24, 7, 30]
+print("Números na lista:")
+for num in numeros:
+    print(num)
+multiplos_de_seis = 0
+for num in numeros:
+    if num % 6 == 0:
+        multiplos_de_seis += 1
+print(f"\nTotal de números múltiplos de seis: {multiplos_de_seis}")
 
 #5. Faça um programa que armazene as notas das provas 1 e 2 de 15 alunos. Calcule
 #e armazene a média arredondada. Armazene também a situação do aluno: 1-
 #Aprovado ou 2-Reprovado. Ao final o programa deve imprimir uma listagem
 #contendo as notas, a média e a situação de cada aluno em formato tabulado.
 #Utilize quantas listas forem necessárias para armazenar os dados.
+def q05 ():
 
 #6. Construa um programa que permita armazenar o salário de 20 pessoas. Calcular
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
