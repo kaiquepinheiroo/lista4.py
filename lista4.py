@@ -85,6 +85,17 @@ def q05 ():
 #6. Construa um programa que permita armazenar o salário de 20 pessoas. Calcular
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
 #listagem numerada com o salário e o novo salário. Declare quantas listas forem
+def q06():
+salarios = []
+print("Digite os salários de 20 pessoas:")
+for i in range(20):
+    s = float(input(f"{i+1}º salário: R$ "))
+    salarios.append(s)
+print("\nSalário | Novo Salário (8% reajuste)")
+for i, s in enumerate(salarios, start=1):
+    novo = s * 1.08
+    print(f"{i:2d} - R$ {s:.2f} -> R$ {novo:.2f}")
+
 
 #6. Construa um programa que permita armazenar o salário de 20 pessoas. Calcular
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
