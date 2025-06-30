@@ -101,6 +101,20 @@ for i, s in enumerate(salarios, start=1):
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
 #listagem numerada com o salário e o novo salário. Declare quantas listas forem
 #necessárias.
+def q06 ():
+salarios_originais = []
+salarios_reajustados = []
+print("Digite os salários de 20 pessoas:")
+for i in range(20):
+    salario = float(input(f"Salário da pessoa {i + 1}: R$ "))
+    salarios_originais.append(salario)
+    novo_salario = salario * 1.08  # Reajuste de 8%
+    salarios_reajustados.append(novo_salario)
+print("\nListagem de salários com reajuste de 8%:")
+print("Nº | Salário Original | Novo Salário")
+print("----------------------------------------")
+for i in range(20):
+    print(f"{i + 1:2} | R$ {salarios_originais[i]:12.2f} | R$ {salarios_reajustados[i]:12.2f}")
 
 #7. Crie um programa que leia o preço de compra e o preço de venda de 100 mercadorias
 #(utilize listas). Ao final, o programa deverá imprimir quantas mercadorias
@@ -108,6 +122,21 @@ for i, s in enumerate(salarios, start=1):
 #• lucro < 10%
 #• 10% <= lucro <= 20%
 #• lucro > 20%
+def q07():
+lucro_menor_10 = lucro_entre_10_20 = lucro_maior_20 = 0
+for i in range(100):
+    compra = float(input(f"Preço de compra da mercadoria {i + 1}: R$ "))
+    venda = float(input(f"Preço de venda da mercadoria {i + 1}: R$ "))
+    lucro_percentual = ((venda - compra) / compra) * 100
+    if lucro_percentual < 10:
+        lucro_menor_10 += 1
+    elif 10 <= lucro_percentual <= 20:
+        lucro_entre_10_20 += 1
+    else:
+        lucro_maior_20 += 1
+print(f"\nLucro < 10%: {lucro_menor_10}")
+print(f"Lucro entre 10% e 20%: {lucro_entre_10_20}")
+print(f"Lucro > 20%: {lucro_maior_20}")
 
 #8. Construa um programa que armazene o código, a quantidade, o valor de compra
 #e o valor de venda de 30 produtos. A listagem pode ser de todos os produtos ou
